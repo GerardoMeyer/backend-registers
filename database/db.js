@@ -1,11 +1,12 @@
 // Importando Sequelize
 import {Sequelize} from "sequelize";
+import 'dotenv/config'
 // const mysql = require('mysql');
 // const xlsx = require('xlsx');
 
 // Conexion a la base de datos database_app
-const db = new Sequelize('nomina_sypris', 'usuario2', 'usuario2', {
-    host: '172.27.98.46', 
+const db = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+    host: process.env.DB_HOST, 
     dialect: 'mysql'
 })
 

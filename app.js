@@ -10,6 +10,8 @@ import db from "./database/db.js";
 // Importamos nuestro enrutador
 import router from './routes/routes.js';
 
+import 'dotenv/config'
+
 
 // Variable de express
 const app = express()
@@ -27,9 +29,11 @@ try {
     console.log(`Error de conexion es: ${error}`)
 }
 
+const PORT = process.env.PORT 
+
 // Corriendo el servidor
-app.listen(9000, () => {
-    console.log(`Servidor corriendo en el puerto: 9000`)
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`)
 })
 
 
