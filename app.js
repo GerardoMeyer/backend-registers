@@ -28,9 +28,8 @@ try {
 }
 
 // Corriendo el servidor
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-    console.log(`Servidor corriendo en el puerto: ${PORT}`)
+app.listen(9000, () => {
+    console.log(`Servidor corriendo en el puerto: 9000`)
 })
 
 
